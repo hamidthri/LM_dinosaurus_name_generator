@@ -88,18 +88,13 @@ def model(data_x, ix_to_char, char_to_ix, num_iterations = 35000, n_a = 50, dino
             print(" X = ", X, "\n", "Y =       ", Y, "\n")
         loss = smooth(loss, curr_loss)
         if j % 2000 == 0:
-
             print('Iteration: %d, Loss: %f' % (j, loss) + '\n')
             seed = 0
             for name in range(dino_names):
                 sampled_indices = sample(parameters, char_to_ix, seed)
                 last_dino_name = get_sample(sampled_indices, ix_to_char)
                 print(last_dino_name.replace('\n', ''))
-
                 seed += 1
-
             print('\n')
-
     return parameters, last_dino_name
-
 parameters, last_name = model(data.split("\n"), ix_to_char, char_to_ix, 22001, verbose = True)
