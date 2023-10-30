@@ -14,4 +14,4 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/dinosaur-name-generator.git
+   git clone https://github.com/hamidthri/dinosaur-name-generator.git
